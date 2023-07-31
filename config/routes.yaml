@@ -1,0 +1,20 @@
+# These lines define a route using YAML configuration. The controller used by
+# the route (FrameworkBundle:Template:template) is a convenient shortcut when
+# the template can be rendered without executing any logic in your own controller.
+# See https://symfony.com/doc/current/templates.html#rendering-a-template-directly-from-a-route
+app_presentation:
+    resource:
+        path: '../src/App/Presentation/'
+        namespace: App\Presentation
+    type: attribute
+    prefix: /
+
+user_presentation:
+    resource:
+        path: '../src/User/Presentation/'
+        namespace: User\Presentation
+    type: attribute
+    prefix: /
+
+api_login_check:
+    path: /api/login_check
