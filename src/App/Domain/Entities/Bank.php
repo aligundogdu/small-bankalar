@@ -38,20 +38,19 @@ class Bank
     #[Assert\NotBlank]
     private ?string $imageUrl = null;
 
-    #[ORM\Column(type: Types::STRING)]
-    #[Assert\NotBlank]
+    #[ORM\Column(type: Types::STRING, nullable: true)]
     private ?string $swiftCode = null;
 
-    #[ORM\Column(type: Types::STRING)]
+    #[ORM\Column(type: Types::STRING, nullable: true)]
     private ?string $phone = null;
 
-    #[ORM\Column(type: Types::STRING)]
+    #[ORM\Column(type: Types::STRING, nullable: true)]
     private ?string $mainAddress = null;
 
-    #[ORM\Column(type: Types::STRING)]
+    #[ORM\Column(type: Types::STRING, nullable: true)]
     private ?string $bankCode = null;
 
-    #[ORM\Column(type: Types::STRING)]
+    #[ORM\Column(type: Types::STRING, nullable: true)]
     private ?string $web = null;
 
     /**
@@ -181,7 +180,6 @@ class Bank
     {
         $this->web = $web;
     }
-
 
 
 }
